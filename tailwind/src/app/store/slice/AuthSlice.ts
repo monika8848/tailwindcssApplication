@@ -40,12 +40,18 @@ const initialState: AuthState = {
   isAuthorized: false,
 };
 
+const hardcodedUser: User = {
+  username: "user",
+  password: "user@123",
+};
+
 const AuthSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    login: (state, action: PayloadAction<User>) => {
-      state.user = action.payload;
+    login: (state) => {
+      // state.user = action.payload;
+      state.user = hardcodedUser;
       state.isAuthorized = true;
     },
     logout: (state) => {

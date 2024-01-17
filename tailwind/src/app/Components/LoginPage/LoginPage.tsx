@@ -10,27 +10,14 @@ const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  // const enteredUsername = username.trim();
-  // const enteredPassword = password.trim();
-  // console.log("Entered Username:", enteredUsername);
-  // console.log("Entered Password:", enteredPassword);
-  // if (enteredUsername === "user" && enteredPassword === "user@123") {
-  //   console.log("correct ");
-  //   // dispatch(login());
-  //   // router.push("/dashboard");
-  // } else {
-  //   console.log("incorrect ");
-  //   // toast.error("Incorrect credentials");
-  // }
-
   const handelLogin = () => {
     // const hardcodedData = { username: "user123", password: "user@123" };
-    const enteredUsername = username.trim();
-    const enteredPassword = password.trim();
-    console.log("Entered Username:", enteredUsername);
-    console.log("Entered Password:", enteredPassword);
+    // const enteredUsername = username.trim();
+    // const enteredPassword = password.trim();
+    // console.log("Entered Username:", enteredUsername);
+    // console.log("Entered Password:", enteredPassword);
 
-    if (enteredUsername === "user" && enteredPassword === "user@123") {
+    if (username === "user" && password === "user@123") {
       console.log("correct ");
       dispatch(login());
       toast.success("logged in succesfully");
@@ -54,7 +41,7 @@ const LoginPage = () => {
             placeholder="Enter Username"
             type="text"
             required
-            // name="username"
+            name="username"
             value={username}
             onChange={(e: any) => setUsername(e.target.value)}
           />
@@ -69,7 +56,7 @@ const LoginPage = () => {
             required
             value={password}
             onChange={(e: any) => setPassword(e.target.value)}
-            // name="password"
+            name="password"
           />
         </div>
 

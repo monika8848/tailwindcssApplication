@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
-import Dasboard from "../Components/Dashboard/Dashboard";
 import { Provider } from "react-redux";
 import { store } from "../store/slice/store";
+import MasterDashboard from "../Components/Dashboard/MasterDashboard";
 
 const dashboard = () => {
   return (
     <>
       <Provider store={store}>
-        <Dasboard />
+        <MasterDashboard />
       </Provider>
     </>
   );

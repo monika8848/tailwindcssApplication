@@ -24,27 +24,22 @@
 // export const authReducer = AuthSlice.reducer;
 
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
 interface User {
   username: string;
   password: string;
 }
-
 interface AuthState {
   user: User | null;
   isAuthorized: boolean;
 }
-
 const initialState: AuthState = {
   user: null,
   isAuthorized: false,
 };
-
 const hardcodedUser: User = {
   username: "user",
   password: "user@123",
 };
-
 const AuthSlice = createSlice({
   name: "auth",
   initialState,
@@ -60,6 +55,5 @@ const AuthSlice = createSlice({
     },
   },
 });
-
 export const { login, logout } = AuthSlice.actions;
 export const authReducer = AuthSlice.reducer;
